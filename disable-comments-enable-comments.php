@@ -80,6 +80,10 @@ Always be very carefull when deleting data, it is always suggested to make a bac
 <input type="submit" name="plugin_tag_action" value="Execute" onclick="javascript:return(confirm('<?php _e("Are you sure you want to proceed?")?>'))" />
 
 </form>
+<BR>
+<p>
+Why not check out my blog: <a href="http://www.seo101.net">seo101.net</a>
+</p>
 <?php
 	} else {
 
