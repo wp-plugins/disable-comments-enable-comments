@@ -3,7 +3,7 @@
  Plugin Name: Disable Comments Enable Comments
  Plugin URI:
  Description: Deletes all tags
- Version: 1.0
+ Version: 1.01
  Author: <a href="http://www.seo101.net">Seo101</a>
  */
 
@@ -50,6 +50,13 @@ function disable_comment_enable_comments_page() {
 
 	if (!$stop) {
 		?>
+
+
+<p>
+Why not check out my blog: <a href="http://www.seo101.net">seo101.net</a>
+</p>
+<BR><BR>
+
 
 <h4>By clicking the button you will modify the comments or pingback settings on all posts and pages</h4>
 <form action="options-general.php?page=disable_comment_enable_comments" method="post">
